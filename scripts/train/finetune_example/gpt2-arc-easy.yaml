@@ -83,8 +83,11 @@ callbacks:
   memory_monitor: {}
   runtime_estimator: {}
 
-# loggers:
-#   wandb: {}
+loggers:
+  wandb:
+    project: prodchat
+    name: mpt-7b-gpt2-arc-easy
+  file: {}
 
 # Checkpoint to local filesystem or remote object store
 # save_interval: 500ba
