@@ -13,6 +13,7 @@ model:
       attn_impl: triton
       # Set this to `true` if using `train_loader.dataset.packing_ratio` below
       attn_uses_sequence_id: false
+  init_device: meta
 
 # Tokenizer
 tokenizer:
