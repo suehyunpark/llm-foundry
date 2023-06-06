@@ -86,8 +86,8 @@ callbacks:
 loggers:
   wandb:
     project: prodchat
-    name: mpt-7b-gpt2-arc-easy
-  file: {}
+    name: ${run_name}
+    entity: suehyun
 
 # Checkpoint to local filesystem or remote object store
 # save_interval: 500ba

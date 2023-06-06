@@ -19,19 +19,14 @@ tokenizer:
 # Dataloaders
 train_loader:
   name: finetuning
-  dataset:
-    ############
+ dataset:
     hf_name: json
+    #### MODIFIED ####
     hf_kwargs:
-      # Note: absolute paths for data_dir are more reliable;
-      # relative paths will be interpreted relative to whatever your
-      # working directory is when you run `train.py`
-      data_dir: finetune_prodchat/debug_small
-    # Note: `scripts/train` will be the working directory when resolving
-    # the preprocessing_fn import path
+      data_dir: finetune_prodchat/debug_512_small
     preprocessing_fn: finetune_prodchat.preprocessing:prodchat_preprocessing_function
-    split: train
-    ############
+    split: train  # train.jsonl
+    ##################
     shuffle: true
     max_seq_len: ${max_seq_len}
     decoder_only_format: true

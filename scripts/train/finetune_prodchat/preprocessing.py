@@ -41,7 +41,7 @@ def prodchat_preprocessing_function(inp: dict):
     title = inp['title']
     body = inp['body']
     context = '\n'.join([ctx['text'][len(ctx['title'])+2:] for ctx in inp['ctxs']])  # remove title from text
-    comment = inp['comments']  # text only
+    comment = inp['comments'].strip()  # text only
     # comment = inp['comments'][0]['body']
         
     return {
